@@ -34,7 +34,7 @@
     <img src="https://img.shields.io/badge/-NodeJS-6DA55F?style=flat-square&logo=node.js&logoColor=white" />
     <img src="https://img.shields.io/badge/-Nginx-008000?style=flat-square&logo=nginx" />
     <img src="https://img.shields.io/badge/-Linux-185886?style=flat-square&logo=linux&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Linux-185886?style=flat-square&logo=mysql&logoColor=white" />
+    <img src="https://img.shields.io/badge/-MySql-3e6e93?style=flat-square&logo=mysql&logoColor=white" />
   </code>  
 </div>  
 
