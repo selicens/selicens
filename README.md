@@ -16,6 +16,7 @@
     <img src="https://img.shields.io/badge/-WebPack-2B3A42?style=flat-square&logo=webpack" />
     <img src="https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
     <img src="https://img.shields.io/badge/-Git-F0EFE7?style=flat-square&logo=git" />
+    <img src="https://img.shields.io/badge/-Axios-5A29E4?style=flat-square&logo=axios" />
   </code>  
 </div>
 <div>
@@ -31,10 +32,13 @@
 <div>
   <p>Server:</p>
   <code>
-    <img src="https://img.shields.io/badge/-NodeJS-6DA55F?style=flat-square&logo=node.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Nginx-008000?style=flat-square&logo=nginx" />
     <img src="https://img.shields.io/badge/-Linux-185886?style=flat-square&logo=linux&logoColor=white" />
     <img src="https://img.shields.io/badge/-MySql-3e6e93?style=flat-square&logo=mysql&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Nginx-008000?style=flat-square&logo=nginx" />
+    <img src="https://img.shields.io/badge/-Docker-003F8C?style=flat-square&logo=docker" />
+    <img src="https://img.shields.io/badge/-NodeJS-6DA55F?style=flat-square&logo=node.js&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Express-3e6e93?style=flat-square&logo=express" />
+    <img src="https://img.shields.io/badge/nestjs-%23E0234E.svg?style=flat-square&logo=nestjs&logoColor=white"/></code>
   </code>  
 </div>  
 
