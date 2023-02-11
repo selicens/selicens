@@ -14,9 +14,10 @@
     <img src="https://img.shields.io/badge/-React-20232A?style=flat-square&logo=react" />
     <img src="https://img.shields.io/badge/-Vue-%2335495e.svg?style=flat-square&logo=vuedotjs" />
     <img src="https://img.shields.io/badge/-WebPack-2B3A42?style=flat-square&logo=webpack" />
-    <img src="https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=Vite&logoColor=white" />
     <img src="https://img.shields.io/badge/-Git-F0EFE7?style=flat-square&logo=git" />
     <img src="https://img.shields.io/badge/-Axios-5A29E4?style=flat-square&logo=axios" />
+    <img src="https://img.shields.io/badge/-UniApp-3A9E46?style=flat-square&logo=uni-app" />
   </span>  
 </div>
 <div>
@@ -24,7 +25,7 @@
   <span>
     <img src="https://img.shields.io/badge/-BootStrap-800080?style=flat-square&logo=bootstrap&logoColor=white" />
     <img src="https://img.shields.io/badge/-AntDesign-1890ff?style=flat-square&logo=ant-design" />
-    <img src="https://img.shields.io/badge/-AntDesignVue-1890ff?style=flat-square" />
+    <img src="https://img.shields.io/badge/-AntDesignVue-1890ff?style=flat-square&logo=ant-design-vue" />
     <img src="https://img.shields.io/badge/-Element-409EFF?style=flat-square" />
     <img src="https://img.shields.io/badge/-ElementPlus-409EFF?style=flat-square" />
   </span>
