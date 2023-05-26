@@ -41,7 +41,10 @@
     <img src="https://img.shields.io/badge/-Express-3e6e93?style=flat-square&logo=express" />
     <img src="https://img.shields.io/badge/nestjs-%23E0234E.svg?style=flat-square&logo=nestjs&logoColor=white"/></code>
   </span>  
-</div>  
+</div>
+
+<img align="right" src="https://metrics.lecoq.io/selicens?template=terminal" />
+<img width="340px" src="https://github-readme-stats.vercel.app/api?username=selicens&theme=vue-dark&count_private=true&show_icons=true" />
 
 - 👋 Hi, I’m @selicens
 - 👀 I’m interested in games
