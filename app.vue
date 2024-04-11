@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>hello! Nuxt selicens</h1>
-    <UButton>Button</UButton>
+    <NuxtPage />
   </div>
 </template>
