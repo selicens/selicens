@@ -2,25 +2,6 @@
 defineOptions({ name: 'PageIndex' })
 const route = useRoute()
 
-const links = [{
-  label: '指引',
-  // to: `${route.path.startsWith('/dev') ? '/dev' : ''}/components/horizontal-navigation`
-}, {
-  label: '随笔',
-  // to: '/components/command-palette'
-}, {
-  label: '关于',
-  // to: '/components/command-palette'
-}, {
-  label: '友情链接',
-  // to: '/components/command-palette'
-  }]
-const items = [
-  [{
-    label: 'Profile'
-  }]
-]
-
 const open = ref(true)
 
 defineShortcuts({
@@ -31,15 +12,15 @@ defineShortcuts({
 <template>
   <UContainer>
     <div style="display: flex;">
-      <UHorizontalNavigation :links="links" class="border-gray-200 dark:border-gray-800">
-        <template #default="{ link }">
-          <template v-if="link.label === '友情链接'">
-            <UDropdown v-model:open="open" :items="items" :popper="{ placement: 'bottom-start' }">
-              <UButton color="white" label="友情链接" trailing-icon="i-heroicons-chevron-down-20-solid" />
-            </UDropdown>
-          </template>
-        </template>
-      </UHorizontalNavigation>
+      <ul style="display: flex;">
+        <li>指引</li>
+        <UDivider orientation="vertical" />
+        <li>随笔</li>
+        <UDivider orientation="vertical" />
+        <li>关于</li>
+        <UDivider orientation="vertical" />
+        <li>友链</li>
+      </ul>
       <UToggle
         on-icon="i-heroicons-check-20-solid"
         off-icon="i-heroicons-x-mark-20-solid"
