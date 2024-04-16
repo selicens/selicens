@@ -11,8 +11,8 @@ defineShortcuts({
 
 <template>
   <UContainer>
-    <div style="display: flex;">
-      <ul style="display: flex;">
+    <div style="display: flex; gap: 10px 10px;">
+      <ul style="display: flex; gap: 10px;">
         <li>指引</li>
         <UDivider orientation="vertical" />
         <li>随笔</li>
@@ -27,19 +27,19 @@ defineShortcuts({
       />
       <UIcon name="i-heroicons-light-bulb" class="w-6 h-6" />
     </div>
-    <div style="margin: 10px;">
+    <div style="display: flex; flex-direction: column; gap: 10px;">
       <h1>Logo</h1>
       <p class="text">Title</p>
       <P class="tagline">Description</P>
-      <div>
+      <div style="display: flex; flex-direction: row; gap: 10px;">
         <UButton>button</UButton>
         <UButton>button</UButton>
         <UButton>button</UButton>
         <UButton>button</UButton>
       </div>
     </div>
-    <div style="display: flex; align-content: space-between; flex-wrap: wrap;">
-      <UCard v-for="item in 6" style="width: 30%; margin: 10px;">
+    <div style="display: flex; align-content: space-between; flex-wrap: wrap; gap: 20px 20px; margin: 10px 0;">
+      <UCard v-for="item in 6" style="width: calc(33.33% - 2 * 10px);">
         <UAvatar icon="i-heroicons-photo" size="sm" />
         <h5>title</h5>
         <p>content</p>
