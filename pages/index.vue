@@ -7,6 +7,15 @@ const open = ref(true)
 defineShortcuts({
   o: () => open.value = !open.value
 })
+const selected = ref(false)
+const colorMode = useColorMode()
+watch(selected, (value) => {
+  if (value) {
+    colorMode.preference = 'dark'
+  } else {
+    colorMode.preference = 'light'
+  }
+})
 </script>
 
 <template>
@@ -22,8 +31,9 @@ defineShortcuts({
         <li>友链</li>
       </ul>
       <UToggle
-        on-icon="i-heroicons-check-20-solid"
-        off-icon="i-heroicons-x-mark-20-solid"
+        v-model="selected"
+        on-icon="i-heroicons-moon-20-solid"
+        off-icon="i-heroicons-sun-20-solid"
       />
       <UIcon name="i-heroicons-light-bulb" class="w-6 h-6" />
     </div>
