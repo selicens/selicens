@@ -1,8 +1,8 @@
 <script setup>
 defineOptions({ name: 'PageIndex' })
 useSeoMeta({
-  title: 'My Amazing Site',
-  ogTitle: 'My Amazing Site',
+  title: 'selicens',
+  ogTitle: 'selicens',
   description: 'This is my amazing site, let me tell you all about it.',
   ogDescription: 'This is my amazing site, let me tell you all about it.',
   ogImage: 'https://example.com/image.png',
@@ -46,12 +46,9 @@ watch(selected, (value) => {
       <UIcon name="i-heroicons-light-bulb" class="w-6 h-6" />
     </div>
     <div style="display: flex; flex-direction: column; gap: 10px;">
-      <h1>Logo</h1>
-      <p class="text">Title</p>
-      <P class="tagline">Description</P>
+      <p class="text">Selicens</p>
+      <P class="tagline">不知名开源爱好者、野路子编程农民工</P>
       <div style="display: flex; flex-direction: row; gap: 10px;">
-        <UButton>button</UButton>
-        <UButton>button</UButton>
         <UButton>button</UButton>
         <UButton>button</UButton>
       </div>
@@ -74,6 +71,10 @@ watch(selected, (value) => {
 .text {
   line-height: 64px;
   font-size: 56px;
+  background: -webkit-linear-gradient(315deg, rgb(66, 211, 146) 25%, rgb(100, 126, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .tagline {
   line-height: 36px;
