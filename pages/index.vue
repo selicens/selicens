@@ -9,21 +9,16 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 const route = useRoute()
-
-const open = ref(true)
-
-defineShortcuts({
-  o: () => open.value = !open.value
-})
 const selected = ref(false)
 const colorMode = useColorMode()
-watch(selected, (value) => {
-  if (value) {
+const switchTheme = () => {
+  selected.value = !selected.value
+  if (selected.value) {
     colorMode.preference = 'dark'
   } else {
     colorMode.preference = 'light'
   }
-})
+}
 </script>
 
 <template>
@@ -42,6 +37,7 @@ watch(selected, (value) => {
         v-model="selected"
         on-icon="i-heroicons-moon-20-solid"
         off-icon="i-heroicons-sun-20-solid"
+        @click="switchTheme"
       />
       <UIcon name="i-heroicons-light-bulb" class="w-6 h-6" />
     </div>
@@ -57,7 +53,7 @@ watch(selected, (value) => {
       <UCard v-for="item in 6" style="width: calc(33.33% - 2 * 10px);">
         <UAvatar icon="i-heroicons-photo" size="sm" />
         <h5>title</h5>
-        <p>content</p>
+        <h5>content</h5>
       </UCard>
     </div>
   </UContainer>
