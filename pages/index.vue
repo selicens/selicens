@@ -9,7 +9,7 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 const route = useRoute()
-const selected = ref(false)
+const selected = useState('selected', () => false)
 const colorMode = useColorMode()
 const switchTheme = () => {
   selected.value = !selected.value
