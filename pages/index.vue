@@ -50,13 +50,11 @@ const switchTheme = (e) => {
   <UContainer>
     <div style="display: flex; gap: 10px 10px;">
       <ul style="display: flex; gap: 10px;">
-        <li>指引</li>
+        <li><NuxtLink to="/">指引</NuxtLink></li>
         <UDivider orientation="vertical" />
-        <li>随笔</li>
+        <li><NuxtLink to="/essay">随笔</NuxtLink></li>
         <UDivider orientation="vertical" />
-        <li>关于</li>
-        <UDivider orientation="vertical" />
-        <li>友链</li>
+        <li><NuxtLink to="/about">关于</NuxtLink></li>
       </ul>
       <UToggle
         v-model="selected"
