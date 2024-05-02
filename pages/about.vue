@@ -1,6 +1,6 @@
 <script setup>
 defineOptions({ name: 'About' })
-const { data } = await useAsyncData('index', () => queryContent('/').findOne())
+const { data } = await useAsyncData('about', () => queryContent('/about').findOne())
 </script>
 
 <template>
