@@ -6,7 +6,8 @@ const { data } = await useAsyncData('about', () => queryContent('/about').findOn
 <template>
   about
   <NuxtLink to="/">home</NuxtLink>
-  <ContentRenderer :value="data" />
+  <!-- <ContentRenderer :value="data" /> -->
+  <ContentDoc path="/about" />
 </template>
 
 <style scoped></style>
