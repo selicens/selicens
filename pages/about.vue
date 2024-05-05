@@ -1,13 +1,15 @@
 <script setup>
 defineOptions({ name: 'About' })
 const { data } = await useAsyncData('about', () => queryContent('/about').findOne())
+const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 </script>
 
 <template>
-  about
-  <NuxtLink to="/">home</NuxtLink>
-  <!-- <ContentRenderer :value="data" /> -->
-  <ContentDoc path="/about" />
+  <ContentDoc path="/about" >
+    <template #doc="doc">
+      <ContentRenderer :value="doc" />
+    </template>
+  </ContentDoc>
 </template>
 
 <style scoped></style>
