@@ -2,6 +2,10 @@
 defineOptions({ name: 'Essay' })
 </script>
 
-<template>essay<NuxtLink to="/">home</NuxtLink></template>
+<template>
+  <UContainer>
+    essay
+  </UContainer>
+</template>
 
 <style scoped></style>
