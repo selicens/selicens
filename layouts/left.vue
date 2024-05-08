@@ -1,15 +1,15 @@
 <script setup lang="ts">
 const selected = ref(false)
 const colorMode = useColorMode()
-const switchTheme = (e: MouseEvent) => {
+const switchTheme = (e: MouseEvent) => { 
   transitionAnimation(e, selected, colorMode)
 }
 </script>
 
 <template>
-  <UContainer>
-    <div class="flex gap-2">
-      <ul class="flex gap-2">
+  <div class="flex">
+    <div class="flex flex-col gap-2">
+      <ul class="flex flex-col gap-2">
         <li><NuxtLink to="/">指引</NuxtLink></li>
         <UDivider orientation="vertical" />
         <li><NuxtLink to="/essay">随笔</NuxtLink></li>
@@ -22,8 +22,8 @@ const switchTheme = (e: MouseEvent) => {
         off-icon="i-heroicons-sun-20-solid"
         @click="(e: MouseEvent) => switchTheme(e)"
       />
-      <UIcon name="i-heroicons-adjustments-vertical" class="w-6 h-6" @click="() => setPageLayout('left')" />
+      <UIcon name="i-heroicons-adjustments-horizontal" class="w-6 h-6" @click="() => setPageLayout('default')" />
     </div>
-  </UContainer>
-  <slot></slot>
+    <slot />
+  </div>
 </template>
