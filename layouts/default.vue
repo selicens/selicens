@@ -12,7 +12,7 @@ const switchTheme = (e: MouseEvent) => {
       <ul class="flex gap-2">
         <li><NuxtLink to="/">指引</NuxtLink></li>
         <UDivider orientation="vertical" />
-        <li><NuxtLink to="/essay">随笔</NuxtLink></li>
+        <li><NuxtLink to="/:test">随笔</NuxtLink></li>
         <UDivider orientation="vertical" />
         <li><NuxtLink to="/about">关于</NuxtLink></li>
       </ul>
