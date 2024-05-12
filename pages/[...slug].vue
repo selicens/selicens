@@ -1,10 +1,15 @@
-<script setup></script>
+<script setup>
+const route = useRoute()
+</script>
 
 <template>
   <main>
-    <ContentDoc>
-      <template #not-found>没有内容</template>
-    </ContentDoc>
+    <UContainer>
+      <ContentDoc :path="route.path.replace(/:/, '')">
+        <template #not-found>没有内容</template>
+        <template #empty>Loading...</template>
+      </ContentDoc>
+    </UContainer>
   </main>
 </template>
 
