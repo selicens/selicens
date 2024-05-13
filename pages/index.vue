@@ -22,8 +22,12 @@ const route = useRoute()
         <div class="image-bg"></div>
       </div>
       <div class="flex gap-2">
-        <UButton>button</UButton>
-        <UButton>button</UButton>
+        <UButton color="sky" variant="outline">
+          <NuxtLink to="/essay">随笔</NuxtLink>
+        </UButton>
+        <UButton color="pink" variant="outline">
+          <NuxtLink to="/about">关于</NuxtLink>
+        </UButton>
       </div>
     </div>
     <div class="grid gap-x-8 gap-y-8 my-8 grid-cols-3">
@@ -45,11 +49,13 @@ const route = useRoute()
     width: 100%;
   }
 }
+
 @keyframes blink {
   from, to {
     border-color: transparent;
   }
 }
+
 .typewriter {
   overflow: hidden;
   background: -webkit-linear-gradient(315deg, rgb(66, 211, 146) 25%, rgb(100, 126, 255));
@@ -59,6 +65,7 @@ const route = useRoute()
   animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
   white-space: nowrap;
 }
+
 .image-bg {
     position: absolute;
     top: 50%;
@@ -107,6 +114,4 @@ const route = useRoute()
         max-height: 320px
     }
 }
-
-
 </style>
