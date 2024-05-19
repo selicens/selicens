@@ -31,11 +31,13 @@ const route = useRoute()
       </div>
     </div>
     <div class="grid gap-x-8 gap-y-8 my-8 grid-cols-3">
-      <UCard v-for="item in 6" style="width: 100%;">
-        <UAvatar icon="i-heroicons-photo" size="sm" />
-        <h5>title</h5>
-        <h5>content</h5>
-      </UCard>
+      <ICard v-for="item in 6" style="width: 100%; height: 100%;">
+        <div>
+          <UAvatar icon="i-heroicons-photo" size="sm" />
+          <h5>title</h5>
+          <h5>content</h5>
+        </div>
+      </ICard>
     </div>
   </UContainer>
 </template>
