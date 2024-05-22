@@ -5,13 +5,11 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
 </script>
 
 <template>
-  <UContainer>
-    <ContentDoc path="/about" >
+  <ContentDoc path="/about" >
       <template #doc="doc">
         <ContentRenderer :value="doc" />
       </template>
     </ContentDoc>
-  </UContainer>
 </template>
 
 <style scoped></style>

@@ -5,9 +5,9 @@ defineOptions({ name: 'ICard' })
 <template>
   <div class="container">
     <div class="content"></div>
-    <UCard v-bind="$attrs">
+    <a-card v-bind="$attrs">
       <slot />
-    </UCard>
+    </a-card>
   </div>
 </template>
 

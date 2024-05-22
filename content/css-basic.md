@@ -2,7 +2,7 @@
 
 ## box-sizing
 
-```css
+```shell
 * {
   width: 100px;
   box-sizing: content-box;

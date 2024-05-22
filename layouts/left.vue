@@ -1,29 +1,34 @@
 <script setup lang="ts">
+import { theme } from 'ant-design-vue'
 const selected = ref(false)
-const colorMode = useColorMode()
-const switchTheme = (e: MouseEvent) => { 
-  transitionAnimation(e, selected, colorMode)
+//const colorMode = useColorMode()
+const switchTheme = () => { 
+  // transitionAnimation(e, selected, 'default')
+  setTheme.value = selected.value ? theme.darkAlgorithm : theme.defaultAlgorithm
 }
+const setTheme = ref(theme.defaultAlgorithm)
 </script>
 
 <template>
-  <div class="flex">
-    <div class="flex flex-col gap-2">
-      <ul class="flex flex-col gap-2">
-        <li><NuxtLink to="/">指引</NuxtLink></li>
-        <UDivider orientation="vertical" />
-        <li><NuxtLink to="/essay">随笔</NuxtLink></li>
-        <UDivider orientation="vertical" />
-        <li><NuxtLink to="/about">关于</NuxtLink></li>
-      </ul>
-      <UToggle
-        v-model="selected"
-        on-icon="i-heroicons-moon-20-solid"
-        off-icon="i-heroicons-sun-20-solid"
-        @click="(e: MouseEvent) => switchTheme(e)"
+  <a-config-provider :theme="{algorithm: setTheme}">
+    <div class="flex">
+      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2">
+        <a-button type="link"><NuxtLink to="/">指引</NuxtLink></a-button>
+        <a-divider type="vertical" />
+        <a-button type="link"><NuxtLink to="/essay">随笔</NuxtLink></a-button>
+        <a-divider type="vertical" />
+        <a-button type="link"><NuxtLink to="/about">关于</NuxtLink></a-button>
+      </div>
+      <a-switch
+        v-model:checked="selected"
+        checked-children="☀️"
+        un-checked-children="🌙"
+        @click="switchTheme"
       />
-      <UIcon name="i-heroicons-adjustments-horizontal" class="w-6 h-6" @click="() => setPageLayout('default')" />
+      <a-avatar class="w-6 h-6" @click="() => setPageLayout('default')" />
     </div>
     <slot />
-  </div>
+    </div>
+  </a-config-provider>
 </template>

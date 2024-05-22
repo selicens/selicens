@@ -3,9 +3,11 @@
 </script>
 <template>
   <div>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <a-config-provider>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </a-config-provider>
   </div>
 </template>
 

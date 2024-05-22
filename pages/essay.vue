@@ -4,17 +4,14 @@ const router = useRouter()
 </script>
 
 <template>
-  <UContainer>
-    <div class="py-2">
-      <UAlert
-        icon="i-heroicons-command-line"
-        description="css基础"
-        title="css"
-        class="my-2"
-        @click="() => router.push('/css-basic')"
-      />
-    </div>
-  </UContainer>
+  <div class="py-2">
+    <a-card
+      class="my-2"
+      @click="() => router.push('/:css-basic')"
+    >
+      css
+    </a-card>
+  </div>
 </template>
 
 <style scoped></style>

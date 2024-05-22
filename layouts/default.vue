@@ -1,29 +1,51 @@
 <script setup lang="ts">
+import { theme } from 'ant-design-vue'
 const selected = ref(false)
-const colorMode = useColorMode()
-const switchTheme = (e: MouseEvent) => {
-  transitionAnimation(e, selected, colorMode)
+//const colorMode = useColorMode()
+const switchTheme = () => {
+  //transitionAnimation(e, selected, 'default')
+  setTheme.value = selected.value ? themeArr['darkAlgorithm'] : themeArr['defaultAlgorithm']
 }
+const { defaultAlgorithm, darkAlgorithm, compactAlgorithm } = theme;
+const themeArr = reactive({
+    defaultAlgorithm,
+    darkAlgorithm
+  })
+const setTheme = ref(themeArr['defaultAlgorithm'])
 </script>
 
 <template>
-  <UContainer>
+  <a-config-provider
+    :theme="{
+      algorithm: setTheme,
+    }">
     <div class="flex gap-2">
-      <ul class="flex gap-2">
-        <li><NuxtLink to="/">指引</NuxtLink></li>
-        <UDivider orientation="vertical" />
-        <li><NuxtLink to="/essay">随笔</NuxtLink></li>
-        <UDivider orientation="vertical" />
-        <li><NuxtLink to="/about">关于</NuxtLink></li>
-      </ul>
-      <UToggle
-        v-model="selected"
-        on-icon="i-heroicons-moon-20-solid"
-        off-icon="i-heroicons-sun-20-solid"
-        @click="(e: MouseEvent) => switchTheme(e)"
+      <div class="flex gap-2">
+        <a-button type="link"><NuxtLink to="/">指引</NuxtLink></a-button>
+        <a-divider type="vertical" />
+        <a-button type="link"><NuxtLink to="/essay">随笔</NuxtLink></a-button>
+        <a-divider type="vertical" />
+        <a-button type="link"><NuxtLink to="/about">关于</NuxtLink></a-button>
+      </div>
+      <a-switch
+        v-model:checked="selected"
+        checked-children="☀️"
+        un-checked-children="🌙"
+        @click="switchTheme"
       />
-      <UIcon name="i-heroicons-adjustments-vertical" class="w-6 h-6" @click="() => setPageLayout('left')" />
+      <a-avatar class="w-6 h-6" @click="() => setPageLayout('left')" />
     </div>
-  </UContainer>
-  <slot></slot>
+    <slot></slot>
+  </a-config-provider>
 </template>
+
+<style>
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+</style>
