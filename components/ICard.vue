@@ -16,7 +16,12 @@ defineOptions({ name: 'ICard' })
   border: 2px solid transparent;
   border-image: linear-gradient(45deg, #ff9a9e, #fad0c4) 1;
   border-image-slice: 30;
+  border-radius: 8px;
   position: relative;
+  transition: margin-top 0.3s ease-in-out;
+}
+.container:hover {
+  margin-top: -10px;
 }
 .content {
   position: absolute;

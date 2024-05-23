@@ -12,32 +12,34 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="flex flex-col gap-4" id="content">
-    <div class="flex">
-      <div>
-        <p class="text-4xl typewriter">Selicens</p>
-        <P class="text-3xl typewriter">不知名开源爱好者、野路子编程农民工</P>
+  <IContainer>
+    <div class="flex flex-col gap-4" id="content">
+      <div class="flex">
+        <div>
+          <p class="text-4xl typewriter">Selicens</p>
+          <P class="text-3xl typewriter">不知名开源爱好者、野路子编程农民工</P>
+        </div>
+        <div class="image-bg"></div>
       </div>
-      <div class="image-bg"></div>
-    </div>
-    <div class="flex gap-2">
-      <a-button>
-        <NuxtLink to="/essay">随笔</NuxtLink>
-      </a-button>
-      <a-button type="primary">
-        <NuxtLink to="/about">关于</NuxtLink>
-      </a-button>
-    </div>
-  </div>
-  <div class="grid gap-x-8 gap-y-8 my-8 grid-cols-3">
-    <ICard v-for="item in 6" style="width: 100%; height: 100%;">
-      <div>
-        <a-avatar size="sm" />
-        <h5>title</h5>
-        <h5>content</h5>
+      <div class="flex gap-2">
+        <a-button>
+          <NuxtLink to="/essay">随笔</NuxtLink>
+        </a-button>
+        <a-button type="primary">
+          <NuxtLink to="/about">关于</NuxtLink>
+        </a-button>
       </div>
-    </ICard>
-  </div>
+    </div>
+    <div class="grid gap-x-8 gap-y-8 my-8 grid-cols-3">
+      <ICard v-for="item in 6" style="width: 100%; height: 100%;">
+        <div>
+          <a-avatar size="sm" />
+          <h5>title</h5>
+          <h5>content</h5>
+        </div>
+      </ICard>
+    </div>
+  </IContainer>
 </template>
 
 <style>

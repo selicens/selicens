@@ -4,14 +4,14 @@ const router = useRouter()
 </script>
 
 <template>
-  <div class="py-2">
+  <IContainer class="py-2">
     <a-card
       class="my-2"
       @click="() => router.push('/:css-basic')"
     >
       css
     </a-card>
-  </div>
+  </IContainer>
 </template>
 
 <style scoped></style>
