@@ -1,13 +1,15 @@
 <script setup>
 const route = useRoute()
+const path = route.path.replace(/:/, '')
+console.log(path)
+const { data } = await useAsyncData('page-data', () => queryContent(path).findOne())
 </script>
 
 <template>
   <IContainer class="prose">
-    <ContentDoc :path="route.path.replace(/:/, '')">
-      <template #not-found>没有内容</template>
-      <template #empty>Loading...</template>
-    </ContentDoc>
+    <ContentRenderer :value="data">
+      <ContentRendererMarkdown :value="data" />
+    </ContentRenderer>
   </IContainer>
 </template>
 
