@@ -1,4 +1,5 @@
 <script setup>
+
 const route = useRoute()
 const path = route.path.replace(/:/, '')
 console.log(path)
@@ -7,9 +8,13 @@ const { data } = await useAsyncData('page-data', () => queryContent(path).findOn
 
 <template>
   <IContainer class="prose">
-    <ContentRenderer :value="data">
-      <ContentRendererMarkdown :value="data" />
-    </ContentRenderer>
+    <ContentDoc :path="path">
+      <template #doc="doc">
+        <ContentRenderer :value="doc">
+          <ContentRendererMarkdown :value="doc" />
+        </ContentRenderer>
+      </template>
+    </ContentDoc>
   </IContainer>
 </template>
 
