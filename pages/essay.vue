@@ -7,7 +7,7 @@ const router = useRouter()
   <IContainer class="py-2">
     <a-card
       class="my-2"
-      @click="() => router.push('/:css-basic')"
+      @click="() => router.push('/css-basic')"
     >
       css
     </a-card>
