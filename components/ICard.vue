@@ -27,7 +27,7 @@ defineOptions({ name: 'ICard' })
   background-color: #94d0c4; /* 内部元素的背景色 */
   z-index: 9999;
   animation: borderAnimation 4s linear infinite; /* 围绕边框旋转的动画 */
-  /* animation-iteration-count: 1; */
+  animation-iteration-count: 10;
 }
 
 @keyframes borderAnimation {
