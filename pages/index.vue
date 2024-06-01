@@ -19,7 +19,6 @@ const route = useRoute()
           <p class="text-4xl typewriter">Selicens</p>
           <P class="text-3xl typewriter">不知名开源爱好者、野路子编程农民工</P>
         </div>
-        <div class="image-bg"></div>
       </div>
       <div class="flex gap-2">
         <a-button>
@@ -66,54 +65,5 @@ const route = useRoute()
   -webkit-text-fill-color: transparent;
   animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
   white-space: nowrap;
-}
-
-.image-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    width: 192px;
-    height: 192px;
-    background-image: linear-gradient( -45deg, #41b88380 30%, #35495e80 );
-    filter: blur(72px);
-    transform: translate(-50%,-50%)
-}
-
-@media (min-width: 640px) {
-    .image-bg {
-        width:256px;
-        height: 256px
-    }
-}
-
-@media (min-width: 960px) {
-    .image-bg {
-        width:320px;
-        height: 320px
-    }
-}
-
-.image-src {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 192px;
-    max-height: 192px;
-    /* transform:translate(-50%,-50%); */
-}
-
-@media (min-width: 640px) {
-    .image-src {
-        max-width:256px;
-        max-height: 256px
-    }
-}
-
-@media (min-width: 960px) {
-    .image-src {
-        max-width:320px;
-        max-height: 320px
-    }
 }
 </style>

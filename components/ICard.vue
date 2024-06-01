@@ -35,24 +35,41 @@ defineOptions({ name: 'ICard' })
     top: 0;
     left: 0;
   }
+
   25% {
     top: 0;
     left: 100%;
     transform: translateX(-100%);
   }
+
   50% {
     top: 100%;
     left: 100%;
     transform: translate(-100%, -100%);
   }
+
   75% {
     top: 100%;
     left: 0;
     transform: translateY(-100%);
   }
+  
   100% {
     top: 0;
     left: 0;
   }
+}
+.ant-card:hover::before {  
+  content: "";  
+  position: absolute;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  bottom: 0;  
+  z-index: -1;  
+  pointer-events: none;  
+  margin: -2px; /* 根据边框宽度调整 */  
+  border-radius: 8px;
+  background: linear-gradient(315deg, rgb(66, 211, 146) 25%, rgb(100, 126, 255));  
 }
 </style>
