@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { theme } from 'ant-design-vue'
 import IContainer from '~/components/IContainer.vue';
+definePageMeta({
+  colorMode: 'light',
+})
 const selected = ref(false)
-//const colorMode = useColorMode()
-const switchTheme = () => {
-  //transitionAnimation(e, selected, 'default')
+const colorMode = useColorMode()
+const switchTheme = (e) => {
+  transitionAnimation(e, selected, colorMode)
   setTheme.value = selected.value ? themeArr['darkAlgorithm'] : themeArr['defaultAlgorithm']
 }
 const { defaultAlgorithm, darkAlgorithm, compactAlgorithm } = theme;
@@ -33,8 +36,9 @@ const setTheme = ref(themeArr['defaultAlgorithm'])
           v-model:checked="selected"
           checked-children="☀️"
           un-checked-children="🌙"
-          @click="switchTheme"
-        />
+          @mouseup="e => switchTheme(e)"
+        > 
+        </a-switch>
         <a-avatar class="w-6 h-6" @click="() => setPageLayout('left')" />
       </div>
     </IContainer>

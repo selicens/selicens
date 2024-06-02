@@ -1,11 +1,12 @@
 export const transitionAnimation = (e: MouseEvent, selected: Ref<boolean>, colorMode) => {
-  selected.value = !selected.value
+  //selected.value = !selected.value
   const transition = document.startViewTransition(() => {
-    colorMode.preference = selected.value ? 'dark' : 'light'
+    colorMode.preference = selected.value ? 'light' : 'dark'
   })
   transition.ready.then(() => {
     // 获取鼠标点击的位置
     const { clientX, clientY } = e
+    console.log(e)
     // 计算半径，以鼠标点击的位置为圆心，到四个角的距离中最大的那个作为半径
     const radius = Math.hypot(
       Math.max(clientX, window.innerWidth - clientX),

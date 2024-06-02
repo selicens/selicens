@@ -38,6 +38,7 @@ const route = useRoute()
         </div>
       </ICard>
     </div>
+    <div class="text-center">Copyright © 2024 by selicens</div>
   </IContainer>
 </template>
 
