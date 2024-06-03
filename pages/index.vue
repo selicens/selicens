@@ -1,4 +1,6 @@
 <script setup>
+import ICard from '~/components/ICard.vue';
+
 defineOptions({ name: 'PageIndex' })
 useSeoMeta({
   title: 'selicens',
@@ -8,7 +10,7 @@ useSeoMeta({
   ogImage: 'https://example.com/image.png',
   twitterCard: 'summary_large_image',
 })
-const route = useRoute()
+const router = useRouter()
 </script>
 
 <template>
@@ -30,10 +32,15 @@ const route = useRoute()
       </div>
     </div>
     <div class="grid gap-x-8 gap-y-8 my-8 grid-cols-3">
-      <ICard v-for="item in 6" style="width: 100%; height: 100%;">
+      <ICard @click="() => router.push('/demo')">
+        <a-avatar size="sm" />
+        <h4>Nuxt加载时悬浮发光动效复刻</h4>
+        <h5>通过鼠标滑动在background展示光晕</h5>
+      </ICard>
+      <ICard v-for="item in 5">
         <div>
           <a-avatar size="sm" />
-          <h5>title</h5>
+          <h4>title</h4>
           <h5>content</h5>
         </div>
       </ICard>

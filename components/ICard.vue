@@ -1,12 +1,26 @@
 <script setup lang="ts">
+
 defineOptions({ name: 'ICard' })
+const slots = defineSlots<{
+  default?(): any
+  actions?(): any
+  cover?(): any
+  customTab?(): any
+  extra?(): any
+  tabBarExtraContent?(): any
+  title?(): any
+}>()
+const slotsName = ref(['default', 'actions', 'cover', 'customTab', 'extra', 'tabBarExtraContent', 'title'])
+console.log(slotsName.value)
 </script>
 
 <template>
   <div class="container">
     <div class="content"></div>
     <a-card v-bind="$attrs">
-      <slot />
+      <template #[item]="data" v-for="item in slotsName" :key="item">
+        <slot :name="item" v-bind="data || {}" />
+      </template>
     </a-card>
   </div>
 </template>
@@ -15,6 +29,7 @@ defineOptions({ name: 'ICard' })
 .container {
   position: relative;
   transition: margin-top 0.3s ease-in-out;
+  cursor: pointer;
 }
 .container:hover {
   margin-top: -10px;
