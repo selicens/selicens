@@ -11,7 +11,6 @@ const slots = defineSlots<{
   title?(): any
 }>()
 const slotsName = ref(['default', 'actions', 'cover', 'customTab', 'extra', 'tabBarExtraContent', 'title'])
-console.log(slotsName.value)
 </script>
 
 <template>

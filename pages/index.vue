@@ -32,7 +32,7 @@ const router = useRouter()
       </div>
     </div>
     <div class="grid gap-x-8 gap-y-8 my-8 grid-cols-3">
-      <ICard @click="() => router.push('/demo')">
+      <ICard @click="() => router.push('/demo1')">
         <a-avatar size="sm" />
         <h4>Nuxt加载时悬浮发光动效复刻</h4>
         <h5>通过鼠标滑动在background展示光晕</h5>
