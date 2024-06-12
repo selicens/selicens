@@ -31,6 +31,7 @@ class BaseElement extends BaseClass {
   }
 
   static get observedAttributes() {
+    // 返回一个数组，包含要观察的属性
     return ['some-attribute'];
   }
 }
