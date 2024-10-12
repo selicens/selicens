@@ -19,7 +19,7 @@ const router = useRouter()
       <div class="flex">
         <div>
           <p class="text-4xl typewriter">Selicens</p>
-          <P class="text-3xl typewriter">不知名开源爱好者、野路子编程农民工</P>
+          <p class="text-3xl typewriter">不知名开源爱好者、野路子编程农民工</p>
         </div>
       </div>
       <div class="flex gap-2">
@@ -32,17 +32,15 @@ const router = useRouter()
       </div>
     </div>
     <div class="grid gap-x-8 gap-y-8 my-8 grid-cols-3">
-      <ICard @click="() => router.push('/demo1')">
+      <ICard @click="() => router.push('/demo')">
         <a-avatar size="sm" />
         <h4>Nuxt加载时悬浮发光动效复刻</h4>
         <h5>通过鼠标滑动在background展示光晕</h5>
       </ICard>
       <ICard v-for="item in 5">
-        <div>
-          <a-avatar size="sm" />
-          <h4>title</h4>
-          <h5>content</h5>
-        </div>
+        <a-avatar size="sm" />
+        <h4>title</h4>
+        <h5>content</h5>
       </ICard>
     </div>
     <div class="text-center">Copyright © 2024 by selicens</div>

@@ -23,7 +23,7 @@ const { data } = await useAsyncData('page-data', () => queryContent(path).findOn
   /* common var */
   --common-transition: all 0.3s ease;
   --common-rd: 0.5em;
-  --common-bg: #69a79429;
+  --common-bg: #f8f8f8;
   --common-bd:#c9c7c2;
 }
 .prose {
@@ -244,5 +244,8 @@ const { data } = await useAsyncData('page-data', () => queryContent(path).findOn
       content: ']';
     }
   }
+}
+a {
+  color: black;
 }
 </style>

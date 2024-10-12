@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import { theme } from 'ant-design-vue'
 import IContainer from '~/components/IContainer.vue';
-definePageMeta({
-  colorMode: 'light',
-})
 const selected = ref(false)
 const colorMode = useColorMode()
-const switchTheme = (e) => {
+const switchTheme = (e: Event) => {
   transitionAnimation(e, selected, colorMode)
-  setTheme.value = selected.value ? themeArr['darkAlgorithm'] : themeArr['defaultAlgorithm']
+  setTheme.value = selected.value ? themeArr['defaultAlgorithm'] : themeArr['darkAlgorithm']
 }
 const { defaultAlgorithm, darkAlgorithm, compactAlgorithm } = theme;
 const themeArr = reactive({
@@ -25,21 +22,28 @@ const setTheme = ref(themeArr['defaultAlgorithm'])
     }">
     <IContainer>
       <div class="flex gap-2">
-        <div class="flex gap-2">
+        <div class="flex">
           <a-button type="link"><NuxtLink to="/">指引</NuxtLink></a-button>
-          <a-divider type="vertical" />
+          <div class="line-height-8">
+            <a-divider type="vertical" />
+          </div>
           <a-button type="link"><NuxtLink to="/essay">随笔</NuxtLink></a-button>
-          <a-divider type="vertical" />
+          <div class="line-height-8">
+            <a-divider type="vertical" />
+          </div>
           <a-button type="link"><NuxtLink to="/about">关于</NuxtLink></a-button>
         </div>
-        <a-switch
-          v-model:checked="selected"
-          checked-children="☀️"
-          un-checked-children="🌙"
-          @mouseup="e => switchTheme(e)"
-        > 
-        </a-switch>
-        <a-avatar class="w-6 h-6" @click="() => setPageLayout('left')" />
+        <div class="line-height-7">
+          <a-switch
+            v-model:checked="selected"
+            checked-children="☀️"
+            un-checked-children="🌙"
+            @mouseup="e => switchTheme(e)"
+          />
+        </div>
+        <div class="line-height-7">
+          <a-avatar class="w-6 h-6" @click="() => setPageLayout('left')" />
+        </div>
       </div>
     </IContainer>
     <slot></slot>

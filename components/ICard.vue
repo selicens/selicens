@@ -1,15 +1,6 @@
 <script setup lang="ts">
 
 defineOptions({ name: 'ICard' })
-const slots = defineSlots<{
-  default?(): any
-  actions?(): any
-  cover?(): any
-  customTab?(): any
-  extra?(): any
-  tabBarExtraContent?(): any
-  title?(): any
-}>()
 const slotsName = ref(['default', 'actions', 'cover', 'customTab', 'extra', 'tabBarExtraContent', 'title'])
 </script>
 

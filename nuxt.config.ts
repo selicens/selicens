@@ -15,4 +15,6 @@ export default defineNuxtConfig({
       theme: 'vitesse-dark'
     }
   },
+  compatibilityDate: '2024-04-03',
+  devtools: { enabled: true }
 })
