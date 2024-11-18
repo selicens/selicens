@@ -31,14 +31,12 @@ const highlighter = await createHighlighterCore({
 
 md.use(container, 'warning', {
   render: function (tokens, idx) {
-    var m = tokens[idx].info.trim().match(/^warning\s+(.*)$/)
-
-    if (tokens[idx].nesting === 1) {
-      // opening tag
-      return '<details><summary>' + md.utils.escapeHtml(m[1]) + '</summary>\n'
+    const token = tokens[idx]
+    const info = token.info?.trim().slice('warning'.length)?.trim()
+    if (token.nesting === 1) {
+      return `<details><summary>warning</summary>\n`
     } else {
-      // closing tag
-      return '</details>\n'
+      return `</details>\n`
     }
   }
 })
