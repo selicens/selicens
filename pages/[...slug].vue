@@ -1,13 +1,12 @@
 <script setup>
   const route = useRoute()
   console.log(route)
-  const path = route?.path.replace('/', '')
-  console.log(path)
+  const slug = route.params.slug
 </script>
 
 <template>
   <div>
-    <IMarkdown :name="path"/>
+    <IMarkdown :name="slug[0]"/>
   </div>
 </template>
 

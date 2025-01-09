@@ -24,8 +24,8 @@
 }
 ```
 
-<details>
-  <summary>vertical-align</summary>
+::: details  
+
 - baseline（默认值）：元素的基线与父元素的基线对齐.  
 - sub：元素的基线与父元素的下标基线对齐.  
 - super：元素的基线与父元素的上标基线对齐.  
@@ -36,8 +36,8 @@
 - text-bottom：元素的底部与父元素的文本底部对齐.  
 - length：元素的基线相对于父元素的基线上移或下移指定的长度.  
 - %：元素的基线相对于父元素的基线上移或下移指定百分比的高度.  
-</details>
+:::
 
 ::: warning
-*here be dragons*
+这是个警告
 :::

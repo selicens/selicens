@@ -17,7 +17,6 @@ const md = new MarkdownIt({
 
 const highlighter = await createHighlighterCore({
   themes: [
-    import('shiki/themes/vitesse-light.mjs'),
     import('shiki/themes/github-light.mjs'),
     import('shiki/themes/github-dark.mjs')
   ],
@@ -29,14 +28,25 @@ const highlighter = await createHighlighterCore({
   loadWasm: import('shiki/wasm')
 })
 
+md.use(container, 'details', {
+  render: function (tokens, idx) {
+    const token = tokens[idx]
+    const info = token.info?.trim().slice('details'.length)?.trim()
+    if (token.nesting === 1) {
+      return `<details><summary>Details</summary>\n`
+    } else {
+      return `</details>\n`
+    }
+  }
+})
 md.use(container, 'warning', {
   render: function (tokens, idx) {
     const token = tokens[idx]
     const info = token.info?.trim().slice('warning'.length)?.trim()
     if (token.nesting === 1) {
-      return `<details><summary>warning</summary>\n`
+      return `<div style="background: #EAB30824"><p>WARNING</p>\n`
     } else {
-      return `</details>\n`
+      return `</div>\n`
     }
   }
 })

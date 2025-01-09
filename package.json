@@ -10,21 +10,21 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@unocss/nuxt": "^0.60.4",
     "ant-design-vue": "^4.2.6"
   },
   "devDependencies": {
     "@ant-design-vue/nuxt": "^1.4.6",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@shikijs/markdown-it": "^1.23.0",
+    "@shikijs/markdown-it": "^1.26.1",
     "@types/markdown-it": "^14.1.2",
+    "@unocss/nuxt": "^0.64.1",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-container": "^4.0.0",
     "markdown-it-emoji": "^3.0.0",
     "markdown-it-table-of-contents": "^0.8.0",
-    "nuxt": "^3.14.159",
-    "shiki": "^1.23.0",
+    "nuxt": "^3.15.1",
+    "shiki": "^1.26.1",
     "vue": "latest",
     "vue-router": "latest"
   }

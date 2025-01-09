@@ -4,7 +4,7 @@ defineOptions({ name: 'IContainer' })
 
 <template>
   <div class="container">
-    <slot />
+    <slot></slot>
   </div>
 </template>
 

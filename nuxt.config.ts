@@ -1,3 +1,6 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import process from 'node:process'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -12,13 +15,13 @@ export default defineNuxtConfig({
   },
   plugins: ['~/plugins/markdown.client'],
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
   vite: {
     build: {
       target: 'esnext' // 支持最新的 ECMAScript 特性
     },
     esbuild: {
       target: 'esnext' // 配置 esbuild 的目标环境
-    }
+    },
+    assetsInclude: ['**/*.md'] // 配置 Vite 处理的文件类型
   }
 })

@@ -9,6 +9,9 @@ useSeoMeta({
   ogDescription: 'This is my amazing site, let me tell you all about it.',
   ogImage: 'https://example.com/image.png',
   twitterCard: 'summary_large_image',
+  keywords: '开源,编程,技术博客',
+  author: 'selicens',
+  robots: 'index,follow'
 })
 const router = useRouter()
 </script>
@@ -24,7 +27,7 @@ const router = useRouter()
       </div>
       <div class="flex gap-2">
         <a-button>
-          <NuxtLink to="/essay">随笔</NuxtLink>
+          <NuxtLink to="/essay" aria-label="查看随笔">随笔</NuxtLink>
         </a-button>
         <a-button type="primary">
           <NuxtLink to="/about">关于</NuxtLink>
