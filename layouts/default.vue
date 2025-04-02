@@ -42,7 +42,7 @@ const setTheme = ref(themeArr['defaultAlgorithm'])
           />
         </div>
         <div class="line-height-7">
-          <a-avatar class="w-6 h-6" @click="() => setPageLayout('left')" />
+          <LayoutOutlined class="w-6 h-6" @click="() => setPageLayout('left')" />
         </div>
       </div>
     </IContainer>
@@ -50,7 +50,7 @@ const setTheme = ref(themeArr['defaultAlgorithm'])
   </a-config-provider>
 </template>
 
-<style>
+<style scoped>
 ul, li {
   margin: 0;
   padding: 0;

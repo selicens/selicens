@@ -5,9 +5,11 @@
 </script>
 
 <template>
-  <div>
+  <IContainer>
     <IMarkdown :name="slug[0]"/>
-  </div>
+  </IContainer>
 </template>
 
-<style scoped></style>
+<style src="../themes/index.css">
+
+</style>

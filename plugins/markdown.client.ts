@@ -5,6 +5,9 @@ import anchor from 'markdown-it-anchor'
 import tableOfContents from 'markdown-it-table-of-contents'
 import { fromHighlighter } from '@shikijs/markdown-it/core'
 import { createHighlighterCore } from 'shiki/core'
+
+import { componentPlugin } from './markdown/component'
+import { containerPlugin } from './markdown/container'
  
 const md = new MarkdownIt({
   html: true, // 允许 HTML 标签
@@ -28,28 +31,6 @@ const highlighter = await createHighlighterCore({
   loadWasm: import('shiki/wasm')
 })
 
-md.use(container, 'details', {
-  render: function (tokens, idx) {
-    const token = tokens[idx]
-    const info = token.info?.trim().slice('details'.length)?.trim()
-    if (token.nesting === 1) {
-      return `<details><summary>Details</summary>\n`
-    } else {
-      return `</details>\n`
-    }
-  }
-})
-md.use(container, 'warning', {
-  render: function (tokens, idx) {
-    const token = tokens[idx]
-    const info = token.info?.trim().slice('warning'.length)?.trim()
-    if (token.nesting === 1) {
-      return `<div style="background: #EAB30824"><p>WARNING</p>\n`
-    } else {
-      return `</div>\n`
-    }
-  }
-})
 md.use(tableOfContents)
 md.use(
   fromHighlighter(highlighter, {
@@ -61,6 +42,8 @@ md.use(
 )
 md.use(emoji) 
 md.use(anchor)
+md.use(componentPlugin)
+md.use(containerPlugin)
 
 export default defineNuxtPlugin(() => {
   return {

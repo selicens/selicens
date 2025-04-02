@@ -34,7 +34,7 @@
     <img src="https://img.shields.io/badge/-BootStrap-800080?style=flat-square&logo=bootstrap&logoColor=white" alt="" />
     <img src="https://img.shields.io/badge/-AntDesign-1890ff?style=flat-square&logo=ant-design" alt="" />
     <img src="https://img.shields.io/badge/-AntDesignVue-1890ff?style=flat-square&logo=ant-design-vue" alt="" />
-    <img src="https://img.shields.io/badge/-Element-409EFF?style=flat-square" alt="" />
+    <img src="https://img.shields.io/badge/-element-409EFF?style=flat-square" alt="" />
     <img src="https://img.shields.io/badge/-ElementPlus-409EFF?style=flat-square" alt="" />
   </span>
 </div>
@@ -55,6 +55,6 @@
 <!-- <img align="right" src="https://metrics.lecoq.io/selicens?template=terminal" /> -->
 | GitHub Stats | Top Langs |
 | :----------: | :-------: |
-| <img align="center" src="https://github-readme-stats.vercel.app/api?username=selicens&show_icons=true&theme=buefy&hide_border=true" alt="" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=selicens&layout=compact&theme=buefy&hide_border=true" alt="" /> |
+| <img align="center" src="https://github-readme-stats-fork-alpha.vercel.app/api?username=selicens&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&line_height=21&border_radius=0&title_color=41b883&icon_color=41b883&text_color=959598&bg_color=9ca3af00" alt="Github stats" /> | <img align="center" src="https://github-readme-stats-fork-alpha.vercel.app/api/top-langs/?username=selicens&hide_title=true&hide_border=true&layout=compact&border_radius=0&title_color=41b883&icon_color=41b883&text_color=959598&bg_color=9ca3af00" alt="任何能以JavaScript实现的终将使用JavaScript" /> |
 
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=selicens&theme=react-dark)](https://github.com/selicens/github-readme-activity-graph)
+[![github activity graph](https://github-readme-activity-graph-qpqpgkqdk-edison1105.vercel.app/graph?username=selicens&theme=nord&color=41b883&point=41b883&hide_border=true&line=959598&title_color=41b883&icon_color=41b883&text_color=959598&bg_color=9ca3af00)](https://github.com/selicens/github-readme-activity-graph)

@@ -1,5 +1,5 @@
 <script setup>
-import ICard from '~/components/ICard.vue';
+  import ICard from '~/components/ICard.vue'
 
 defineOptions({ name: 'PageIndex' })
 useSeoMeta({
@@ -40,7 +40,12 @@ const router = useRouter()
         <h4>Nuxt加载时悬浮发光动效复刻</h4>
         <h5>通过鼠标滑动在background展示光晕</h5>
       </ICard>
-      <ICard v-for="item in 5">
+      <ICard @click="() => router.push('/demo2')">
+        <a-avatar size="sm" />
+        <h4>拟态组件</h4>
+        <h5>preview</h5>
+      </ICard>
+      <ICard v-for="item in 4">
         <a-avatar size="sm" />
         <h4>title</h4>
         <h5>content</h5>

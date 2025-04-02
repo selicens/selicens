@@ -3,9 +3,9 @@ defineOptions({ name: 'About' })
 </script>
 
 <template>
-  <div>
+  <IContainer>
     <IMarkdown name="about" />
-  </div>
+  </IContainer>
 </template>
 
 <style scoped></style>

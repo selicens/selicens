@@ -1,6 +1,3 @@
-import fs from 'node:fs'
-import path from 'node:path'
-import process from 'node:process'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },

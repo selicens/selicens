@@ -5,9 +5,9 @@
 </script>
 
 <template>
-  <div>
-    <slot></slot>
-  </div>
+  <IContainer>
+    <IMarkdown :name="nuxt-press" />
+  </IContainer>
 </template>
 
 <style scoped></style>
