@@ -9,7 +9,7 @@
   const mdRender = ref()
   const nuxtApp = useNuxtApp()
   // import.meta.glob默认是懒加载和返回文件路径，所以需要设置as: 'raw'来获取文件内容，eager: true来提前加载
-  const markdownModules = import.meta.glob(`~/content/*.md`, { as: 'raw', eager: true })
+  const markdownModules = import.meta.glob(`~/content/*.md`, { query: '?raw', eager: true, import: 'default' })
   for (const module in markdownModules) {
     const name = module.split('/').pop().split('.').shift()
     if (name === props.name) {
