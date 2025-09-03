@@ -1,5 +1,4 @@
-import MarkdownIt from 'markdown-it';
-import container from 'markdown-it-container'
+import MarkdownIt from 'markdown-it'
 import { full as emoji } from 'markdown-it-emoji'
 import anchor from 'markdown-it-anchor'
 import tableOfContents from 'markdown-it-table-of-contents'

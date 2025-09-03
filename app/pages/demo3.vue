@@ -2,11 +2,12 @@
   defineOptions({ name: 'demo3', inheritAttrs: true })
   const attrs = useAttrs()
   console.log(attrs)
+  const data = ref('')
 </script>
 
 <template>
   <IContainer>
-    <IMarkdown :name="nuxt-press" />
+    <IMarkdown name="nuxt-press" />
   </IContainer>
 </template>
 

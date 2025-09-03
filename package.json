@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^4.2.6",
-    "nuxt": "3.15.1",
+    "nuxt": "4.1.0",
     "unocss": "66.1.0-beta.6",
     "vue": "latest",
     "vue-router": "latest"
@@ -33,6 +33,10 @@
       "@parcel/watcher",
       "core-js",
       "esbuild"
-    ]
-  }
+    ],
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    }
+  },
+  "packageManager": "pnpm@9.0.5+sha1.6db99351548f394a1d96aa1de98dec032aef8823"
 }
