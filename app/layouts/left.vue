@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { theme } from 'ant-design-vue'
+import { useSwitchTheme } from '../utils/switchTheme'
+import { LayoutOutlined } from "@antdv-next/icons";
 const selected = ref(false)
-//const colorMode = useColorMode()
-const switchTheme = () => { 
-  // transitionAnimation(e, selected, 'default')
-  setTheme.value = selected.value ? theme.darkAlgorithm : theme.defaultAlgorithm
-}
-const setTheme = ref(theme.defaultAlgorithm)
+
+const [switchTheme, setTheme] = useSwitchTheme(selected)
 </script>
 
 <template>
@@ -26,7 +23,9 @@ const setTheme = ref(theme.defaultAlgorithm)
         un-checked-children="🌙"
         @click="switchTheme"
       />
-      <a-avatar class="w-6 h-6" @click="() => setPageLayout('default')" />
+      <div class="align-center flex">
+        <LayoutOutlined class="w-6 h-6" @click="() => setPageLayout('default')" />
+      </div>
     </div>
     <slot />
     </div>

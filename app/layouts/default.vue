@@ -1,18 +1,9 @@
 <script setup lang="ts">
-import { theme } from 'ant-design-vue'
-import IContainer from '~/components/IContainer.vue';
+import { useSwitchTheme } from '../utils/switchTheme'
+import { LayoutOutlined } from "@antdv-next/icons";
+
 const selected = ref(false)
-const colorMode = useColorMode()
-const switchTheme = (e: Event) => {
-  transitionAnimation(e, selected, colorMode)
-  setTheme.value = selected.value ? themeArr['defaultAlgorithm'] : themeArr['darkAlgorithm']
-}
-const { defaultAlgorithm, darkAlgorithm, compactAlgorithm } = theme;
-const themeArr = reactive({
-    defaultAlgorithm,
-    darkAlgorithm
-  })
-const setTheme = ref(themeArr['defaultAlgorithm'])
+  const [switchTheme, setTheme] = useSwitchTheme(selected)
 </script>
 
 <template>

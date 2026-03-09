@@ -1,5 +1,4 @@
 export const transitionAnimation = (e: Event, selected: Ref<boolean>, colorMode: any) => {
-  //selected.value = !selected.value
   const transition = document.startViewTransition(() => {
     colorMode.preference = selected.value ? 'dark' : 'light'
   })

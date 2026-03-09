@@ -1,7 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@unocss/nuxt', '@ant-design-vue/nuxt', '@nuxtjs/color-mode'],
+  modules: ['@unocss/nuxt', '@antdv-next/nuxt', '@nuxtjs/color-mode'],
+  css: ['antdv-next/dist/reset.css'],
   dir: {
     app: 'app',
   },
@@ -22,6 +23,6 @@ export default defineNuxtConfig({
     esbuild: {
       target: 'esnext' // 配置 esbuild 的目标环境
     },
-    assetsInclude: ['**/*.md'] // 配置 Vite 处理的文件类型
+    assetsInclude: ['**/*.md'], // 配置 Vite 处理的文件类型
   }
 })

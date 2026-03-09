@@ -53,6 +53,11 @@ const router = useRouter()
         <h4>ErrorPage</h4>
         <h5>preview</h5>
       </ICard>
+      <ICard @click="() => router.push('/demo5')">
+        <a-avatar size="sm" />
+        <h4>markdown</h4>
+        <h5>preview</h5>
+      </ICard>
       <ICard v-for="item in 2">
         <a-avatar size="sm" />
         <h4>title</h4>

@@ -1,6 +1,5 @@
 <script setup>
   const route = useRoute()
-  console.log(route)
   const slug = route.params.slug
 </script>
 
