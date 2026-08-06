@@ -1,10 +1,8 @@
 # CSS
 
-[[toc]]
-
 ## box-sizing
 
-```css
+```css [file.js]{2} meta-info=val
 * {
   width: 100px;
   box-sizing: content-box;
@@ -24,7 +22,7 @@
 }
 ```
 
-::: details vertical-align属性  
+::details{title='vertical-align属性'}
 
 - baseline（默认值）：元素的基线与父元素的基线对齐.  
 - sub：元素的基线与父元素的下标基线对齐.  
@@ -36,4 +34,5 @@
 - text-bottom：元素的底部与父元素的文本底部对齐.  
 - length：元素的基线相对于父元素的基线上移或下移指定的长度.  
 - %：元素的基线相对于父元素的基线上移或下移指定百分比的高度.  
-:::
+
+::

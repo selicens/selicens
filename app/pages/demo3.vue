@@ -1,14 +1,12 @@
 <script setup>
-  defineOptions({ name: 'demo3', inheritAttrs: true })
-  const attrs = useAttrs()
-  console.log(attrs)
-  const data = ref('')
+  defineOptions({ name: 'demo3' })
+  const { data: doc } = await useAsyncData('demo3-nuxt-press', () =>
+    queryCollection('content').path('/nuxt-press').first()
+  )
 </script>
 
 <template>
   <IContainer>
-    <IMarkdown name="nuxt-press" />
+    <ContentRenderer v-if="doc" :value="doc" :prose="true" />
   </IContainer>
 </template>
-
-<style scoped></style>

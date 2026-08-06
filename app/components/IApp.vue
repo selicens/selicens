@@ -15,5 +15,3 @@
 <template>
   <a-button type="primary" @click="showMessage">Open message</a-button>
 </template>
-
-<style scoped></style>

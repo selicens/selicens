@@ -1,21 +1,21 @@
 <script setup>
-defineOptions({ name: 'PageIndex' })
-useSeoMeta({
-  title: 'selicens',
-  ogTitle: 'selicens',
-  description: 'This is my amazing site, let me tell you all about it.',
-  ogDescription: 'This is my amazing site, let me tell you all about it.',
-  ogImage: 'https://example.com/image.png',
-  twitterCard: 'summary_large_image',
-  keywords: '开源,编程,技术博客',
-  author: 'selicens',
-  robots: 'index,follow'
-})
-const router = useRouter()
+  defineOptions({ name: 'PageIndex' })
+  useSeoMeta({
+    title: 'selicens',
+    ogTitle: 'selicens',
+    description: 'This is my amazing site, let me tell you all about it.',
+    ogDescription: 'This is my amazing site, let me tell you all about it.',
+    ogImage: 'https://example.com/image.png',
+    twitterCard: 'summary_large_image',
+    keywords: '开源,编程,技术博客',
+    author: 'selicens',
+    robots: 'index,follow'
+  })
+  const router = useRouter()
 </script>
 
 <template>
-  <IContainer>
+  <IContainer class="min-h-dvh min-w-dvw">
     <div class="flex flex-col gap-4" id="content">
       <div class="flex">
         <div>
@@ -58,7 +58,7 @@ const router = useRouter()
         <h4>markdown</h4>
         <h5>preview</h5>
       </ICard>
-      <ICard v-for="item in 2">
+      <ICard v-for="item in 1">
         <a-avatar size="sm" />
         <h4>title</h4>
         <h5>content</h5>
@@ -69,28 +69,31 @@ const router = useRouter()
 </template>
 
 <style>
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
+  @keyframes typing {
+    from {
+      width: 0;
+    }
 
-@keyframes blink {
-  from, to {
-    border-color: transparent;
+    to {
+      width: 100%;
+    }
   }
-}
 
-.typewriter {
-  overflow: hidden;
-  background: -webkit-linear-gradient(315deg, rgb(66, 211, 146) 25%, rgb(100, 126, 255));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
-  white-space: nowrap;
-}
+  @keyframes blink {
+
+    from,
+    to {
+      border-color: transparent;
+    }
+  }
+
+  .typewriter {
+    overflow: hidden;
+    background: -webkit-linear-gradient(315deg, rgb(66, 211, 146) 25%, rgb(100, 126, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
+    white-space: nowrap;
+  }
 </style>

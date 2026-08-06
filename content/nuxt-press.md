@@ -2,25 +2,35 @@
 
 ## message
 
-::: info
+### info
+
+::info
 info
-:::
+::
 
-::: tip
+### tip
+
+::tip
 tip
-:::
+::
 
-::: warning
+### warning
+
+::warning
 warning
-:::
+::
 
-::: danger
+### danger
+
+::danger
 danger
-:::
+::
 
-::: details
+### details
+
+::details
 details
-:::
+::
 
 ## Tables
 
@@ -40,8 +50,14 @@ details
 
 ## Code
 
+`code`
+
 ```js
 let a = 1
 let b = 2
 a + b === 3 
 ```
+
+## block-quote
+
+> help

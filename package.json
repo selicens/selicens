@@ -9,35 +9,19 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "antdv-next": "^1.1.2",
-    "nuxt": "4.3.1",
-    "unocss": "66.5.0",
+    "@nuxt/content": "latest",
+    "antdv-next": "latest",
+    "better-sqlite3": "^12.5.0",
+    "nuxt": "4.5.0",
+    "unocss": "latest",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@antdv-next/icons": "^1.0.4",
-    "@antdv-next/nuxt": "^1.0.1",
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@shikijs/markdown-it": "^1.29.2",
-    "@types/markdown-it": "^14.1.2",
-    "@unocss/nuxt": "^66.6.6",
-    "markdown-it": "^14.1.1",
-    "markdown-it-anchor": "^9.2.0",
-    "markdown-it-container": "^4.0.0",
-    "markdown-it-emoji": "^3.0.0",
-    "markdown-it-table-of-contents": "^0.8.0",
-    "shiki": "^1.29.2"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "core-js",
-      "esbuild"
-    ],
-    "overrides": {
-      "vite": "npm:rolldown-vite@latest"
-    }
+    "@antdv-next/icons": "latest",
+    "@antdv-next/nuxt": "latest",
+    "@nuxtjs/color-mode": "latest",
+    "@unocss/nuxt": "latest"
   },
   "packageManager": "pnpm@9.0.5+sha1.6db99351548f394a1d96aa1de98dec032aef8823"
 }

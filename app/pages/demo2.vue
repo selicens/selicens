@@ -2,51 +2,46 @@
 
 <template>
   <div>
-  <span>拟态</span>
-  card:
-  <div class="card">
-    <h3>Card Title</h3>
-    <p>This is a card with neumorphism style.</p>
-    button:
-    <button>click</button>
-    switch:
-    <label class="label">
-      <div class="toggle">
-        <input
-          class="toggle-state"
-          type="checkbox"
-          name="check"
-          value="check"
-        />
-        <div class="indicator"></div>
-      </div>
-    </label>
-    checkbox:
-    <label class="checkbox-label">
-      <input type="checkbox" class="checkbox-input" />
-      <span class="checkbox-custom">
-        <svg class="checkmark" viewBox="0 0 24 24">
-          <path d="M20 6L9 17l-5-5" />
-        </svg>
-      </span>
-      <span class="checkbox-text">Check me</span>
-    </label>
-    input:
-    <input type="text" class="input-field" placeholder="Enter text" />
-    textarea:
-    <textarea class="input-field" placeholder="Enter text" />
-    radio:
-    <label class="radio-label">
-      <input type="radio" class="radio-input" name="radio" />
-      <span class="radio-custom"></span>
-      <span class="radio-text">Option 1</span>
-    </label>
-    <label class="radio-label">
-      <input type="radio" class="radio-input" name="radio" />
-      <span class="radio-custom"></span>
-      <span class="radio-text">Option 2</span>
-    </label>
-  </div>
+    <span>拟态</span>
+    card:
+    <div class="card">
+      <h3>Card Title</h3>
+      <p>This is a card with neumorphism style.</p>
+      button:
+      <button>click</button>
+      switch:
+      <label class="label">
+        <div class="toggle">
+          <input class="toggle-state" type="checkbox" name="check" value="check" />
+          <div class="indicator"></div>
+        </div>
+      </label>
+      checkbox:
+      <label class="checkbox-label">
+        <input type="checkbox" class="checkbox-input" />
+        <span class="checkbox-custom">
+          <svg class="checkmark" viewBox="0 0 24 24">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+        </span>
+        <span class="checkbox-text">Check me</span>
+      </label>
+      input:
+      <input type="text" class="input-field" placeholder="Enter text" />
+      textarea:
+      <textarea class="input-field" placeholder="Enter text" />
+      radio:
+      <label class="radio-label">
+        <input type="radio" class="radio-input" name="radio" />
+        <span class="radio-custom"></span>
+        <span class="radio-text">Option 1</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" class="radio-input" name="radio" />
+        <span class="radio-custom"></span>
+        <span class="radio-text">Option 2</span>
+      </label>
+    </div>
   </div>
 </template>
 
@@ -67,6 +62,7 @@
     color: #666;
     box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
   }
+
   label {
     display: inline-flex;
     align-items: center;

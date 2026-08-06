@@ -1,11 +1,12 @@
 <script setup>
-defineOptions({ name: 'About' })
+  defineOptions({ name: 'About' })
+  const { data: doc } = await useAsyncData('about', () =>
+    queryCollection('content').path('/about').first()
+  )
 </script>
 
 <template>
   <IContainer>
-    <IMarkdown name="about" />
+    <ContentRenderer v-if="doc" :value="doc" :prose="true" />
   </IContainer>
 </template>
-
-<style scoped></style>

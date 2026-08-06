@@ -1,11 +1,11 @@
 <script setup>
-defineOptions({ name: 'IContainer' })
+  defineOptions({ name: 'IContainer' })
 </script>
 
 <template>
-  <div class="container">
+  <a-card>
     <slot></slot>
-  </div>
+  </a-card>
 </template>
 
 <style scoped>
