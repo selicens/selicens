@@ -12,7 +12,7 @@
     "@nuxt/content": "latest",
     "antdv-next": "latest",
     "better-sqlite3": "^12.5.0",
-    "nuxt": "4.5.0",
+    "nuxt": "4.6.4",
     "unocss": "latest",
     "vue": "latest",
     "vue-router": "latest"

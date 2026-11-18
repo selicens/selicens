@@ -1,6 +1,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@unocss/nuxt', '@antdv-next/nuxt', '@nuxtjs/color-mode'],
+  modules: [
+    '@nuxt/content',
+    '@unocss/nuxt',
+    '@antdv-next/nuxt',
+    '@nuxtjs/color-mode'
+  ],
   css: ['antdv-next/dist/reset.css'],
   app: {
     baseURL: '/selicens/',

@@ -1,5 +1,5 @@
 # https://github.com/actions/deploy-pages#usage
-name: Deploy to GitHub Pages
+name: Deploy Nuxt App to GitHub Pages
 on:
   workflow_dispatch:
   push:
@@ -9,16 +9,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
         with:
-          node-version: "20"
+          persist-credentials: false
+      - run: corepack enable
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
       # Pick your own package manager and build script
       - run: npm install
+      # Drop the env var below if your GitHub Pages is configured for a custom domain
       - run: npx nuxt build --preset github_pages
+        env:
+          NUXT_APP_BASE_URL: /${{ github.event.repository.name }}/
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./.output/public
   # Deployment job
@@ -38,4 +43,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
